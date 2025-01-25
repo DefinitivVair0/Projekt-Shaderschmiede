@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projekt_Shaderschmiede", "Projekt_Shaderschmiede\Projekt_Shaderschmiede.csproj", "{C551CC1F-93EF-4523-8473-0FCEF5D741A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C551CC1F-93EF-4523-8473-0FCEF5D741A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C551CC1F-93EF-4523-8473-0FCEF5D741A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C551CC1F-93EF-4523-8473-0FCEF5D741A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C551CC1F-93EF-4523-8473-0FCEF5D741A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {576FF149-C189-4553-B8CF-E3BDCFB40998}
+	EndGlobalSection
+EndGlobal

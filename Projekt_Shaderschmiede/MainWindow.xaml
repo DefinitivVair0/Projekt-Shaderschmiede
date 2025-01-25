@@ -1,0 +1,35 @@
+﻿<Window x:Class="Projekt_Shaderschmiede.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_Shaderschmiede"
+        mc:Ignorable="d"
+        Title="Shaderschmiede - Shadererstellungstool" Height="451" Width="284" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="PrintBtn" Content="Create file" HorizontalAlignment="Left" Height="60" Margin="21,327,0,0" VerticalAlignment="Top" Width="229" Click="PrintBtn_Click" Foreground="#FFBDBDF9" BorderBrush="#FF6464C8" Background="#FF2A2A2A"/>
+        <TextBox x:Name="TB_Name" HorizontalAlignment="Left" Margin="123,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" TextChanged="TB_Name_TextChanged" BorderBrush="#FF6464C8"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="21,53,0,0" VerticalAlignment="Top" Foreground="#FFBDBDF9"/>
+        <Label Content="Category" HorizontalAlignment="Left" Margin="21,84,0,0" VerticalAlignment="Top" Foreground="#FFBDBDF9"/>
+        <TextBox x:Name="TB_Kategorie" HorizontalAlignment="Left" Margin="123,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Foreground="#FFC8C8C8" BorderBrush="#FF6464C8"/>
+        <GroupBox HorizontalAlignment="Left" Height="74" Header="Render mode" Margin="24,115,0,0" VerticalAlignment="Top" Width="111" BorderBrush="#FF6464C8" Foreground="#FFBDBDF9">
+            <Grid Height="53" Margin="0,0,-2,0">
+                <RadioButton x:Name="ModeSelect_Opaque" Content="Solid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" GroupName="ModeSelect" IsChecked="True" Foreground="#FFBDBDF9"/>
+                <RadioButton x:Name="ModeSelect_Transparent" Content="Transparent" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" GroupName="ModeSelect" Foreground="#FFBDBDF9"/>
+            </Grid>
+        </GroupBox>
+        <TextBox x:Name="TB_LOD" HorizontalAlignment="Left" Margin="123,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" TextChanged="TB_LOD_TextChanged" BorderBrush="#FF6464C8"/>
+        <Label Content="Level Of Detail" HorizontalAlignment="Left" Margin="21,196,0,0" VerticalAlignment="Top" Foreground="#FFBDBDF9"/>
+        <Button x:Name="VarAddBtn" Content="Edit shader variables" HorizontalAlignment="Left" Height="41" Margin="21,225,0,0" VerticalAlignment="Top" Width="229" Click="VarAddBtn_Click" Foreground="#FFBDBDF9" Background="#FF2A2A2A" BorderBrush="#FF6464C8"/>
+        <Label Content="Shaderschmiede V1" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="Black" Foreground="#FFBDBDF9"/>
+        <Button x:Name="ChangePathBtn" Content="Change" HorizontalAlignment="Left" Margin="200,284,0,0" VerticalAlignment="Top" Height="22" Width="50" Click="ChangePathBtn_Click" Foreground="#FFBDBDF9" BorderBrush="#FF6464C8" Background="#FF2A2A2A"/>
+        <TextBox x:Name="TB_Path" HorizontalAlignment="Left" Margin="21,284,0,0" VerticalAlignment="Top" Width="174" IsReadOnly="True" Height="22" BorderBrush="#FF6464C8"/>
+        <GroupBox HorizontalAlignment="Left" Height="74" Header="Demo-Code" Margin="139,115,0,0" VerticalAlignment="Top" Width="111" BorderBrush="#FF6464C8" Foreground="#FFBDBDF9" BorderThickness="1,1,1,1">
+            <Grid Height="53" Margin="0,0,-2,0">
+                <CheckBox x:Name="CB_DemoCodeVert" Content="Vertex" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="CB_DemoCodeVert_Checked" Unchecked="CB_DemoCodeVert_Unchecked" Foreground="#FFBDBDF9"/>
+                <CheckBox x:Name="CB_DemoCodeFrag" Content="Fragment" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Checked="CB_DemoCodeFrag_Checked" Unchecked="CB_DemoCodeFrag_Unchecked" Foreground="#FFBDBDF9"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
