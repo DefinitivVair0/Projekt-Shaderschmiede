@@ -19,10 +19,8 @@ namespace Projekt_Shaderschmiede
         private void UpdateLB()
         {
             LBVar.Items.Clear();
-            foreach (string s in MainWindow.VarList)
-            {
-                LBVar.Items.Add(s);
-            }
+
+            MainWindow.VarList.ForEach(s => LBVar.Items.Add(s));
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
@@ -50,24 +48,15 @@ namespace Projekt_Shaderschmiede
             }
             else
             {
-                if (TB_Name.Text == "") TB_Name.BorderBrush = Brushes.Red;
-                else TB_Name.BorderBrush = MainWindow.GetDefaultBrush();
-
-                if (TB_Desc.Text == "") TB_Desc.BorderBrush = Brushes.Red;
-                else TB_Desc.BorderBrush = MainWindow.GetDefaultBrush();
-
-                if (CB_Type.SelectedItem == null) CB_Type.BorderBrush = Brushes.Red;
-                else CB_Type.BorderBrush = MainWindow.GetDefaultBrush();
-
-                if (TB_Val.Text == "") TB_Val.BorderBrush = Brushes.Red;
-                else TB_Val.BorderBrush = MainWindow.GetDefaultBrush();
+                TB_Name.BorderBrush = TB_Name.Text == "" ? Brushes.Red : MainWindow.GetDefaultBrush();
+                TB_Desc.BorderBrush = TB_Desc.Text == "" ? Brushes.Red : MainWindow.GetDefaultBrush();
+                CB_Type.BorderBrush = CB_Type.SelectedItem is null ? Brushes.Red : MainWindow.GetDefaultBrush();
+                TB_Val.BorderBrush = TB_Val.Text == "" ? Brushes.Red : MainWindow.GetDefaultBrush();
             }
         }
 
-        private void CancelBtn_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        private void CancelBtn_Click(object sender, RoutedEventArgs e) => this.Close();
+
 
         private void CB_Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

@@ -98,8 +98,7 @@ namespace Projekt_Shaderschmiede
             f.Name = TB_Name.Text;
 
             //assign category
-            if (TB_Kategorie.Text == "") f.Kategorie = "Unlit";
-            else f.Kategorie = TB_Kategorie.Text;
+            f.Kategorie = TB_Kategorie.Text == "" ? "Unlit" : TB_Kategorie.Text;
 
             //assign variables [editor]
             f.Variablen = VarList;
@@ -147,10 +146,7 @@ namespace Projekt_Shaderschmiede
             {
                 using (StreamWriter sw = File.CreateText(path + $"\\{f.Name}.shader"))
                 {
-                    foreach (string s in print)
-                    {
-                        sw.WriteLine(s);
-                    }
+                    print.ForEach(s => sw.WriteLine(s));
                 }
 
                 
